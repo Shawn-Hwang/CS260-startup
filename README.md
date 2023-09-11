@@ -1,3 +1,2 @@
 # CS260-startup
-hello there!
-Hello from github!
+[Notes](/notes.md)
