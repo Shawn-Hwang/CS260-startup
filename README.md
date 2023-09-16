@@ -12,16 +12,12 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 ### Key features
 - Secure login over HTTPS
 - Ability to select the verse/chapter to post comment on
-- Ability to view others' comments
+- Ability to view others' comments### Technologies
 - Chronological/random ordering of all the comments
 - Comments are persistently stored
 - Ability for admin to delete user comments
 
 ### Technologies
-- HTML:
-- CSS:
-- JavaScript:
-- Web Services:
-- Authentication:
-- Database data:
-- WebSocket data:
+- Authentication: users need to register/login before they can enter the main page. Registration and login functionalities will be implemented.
+- Database data: all the comments posted by users will be stored in a database.
+- WebSocket data: the website can retrieve the latest comments every time another user posts
