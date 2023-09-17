@@ -6,7 +6,7 @@
 
 
 ## Server info
-- IP: 54.157.55.49
+- IP: http://54.157.55.49
 - SSH Command: `ssh 260`
 
 ## Sep 11, 2023
