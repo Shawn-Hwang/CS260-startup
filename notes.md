@@ -14,7 +14,17 @@
 - Resolving merge conflicts
 
 ## HTML
-- Elements and tags:
+### Elements and tags
 ```html
 <p>Hello world</p>
+```
+
+### Attributes
+```html
+<p id="hello" class="greeting">Hello world</p>
+```
+
+### Hyperlinks
+```html
+<a href="https://byu.edu">Go to the Y</a>
 ```
