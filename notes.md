@@ -82,3 +82,12 @@ HTML uses several reserved characters for defining its file format. If you want 
 | "         | `&quot;`    |
 | '         | `&apos;`    |
 | &#128512; | `&#128512;` |
+
+### Images
+```html
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+```
+or
+```html
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+```
