@@ -6,7 +6,7 @@
 
 
 ## Server info
-- IP: http://54.157.55.49
+- IP: https://bomforum.org
 - SSH Command: `ssh 260`
 
 ## Sep 11, 2023
