@@ -14,6 +14,7 @@
 - Resolving merge conflicts
 
 ## HTML
-- Elements and tags: ```html
-                      <p>Hello world</p>
-                      ```
+- Elements and tags:
+```html
+<p>Hello world</p>
+```
