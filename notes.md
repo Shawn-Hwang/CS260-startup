@@ -7,7 +7,10 @@
 
 ## Server info
 - IP: https://bomforum.org
-- SSH Command: `ssh 260`
+- SSH Command: `ssh 260
+
+## Class Github Pages
+- https://github.com/webprogramming260/.github/blob/main/profile/instructionTopics.md#readme
 
 ## Sep 11, 2023
 - Basic Markdown [grammars](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
