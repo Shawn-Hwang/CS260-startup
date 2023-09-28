@@ -7,7 +7,7 @@
 
 ## Server info
 - IP: https://bomforum.org
-- SSH Command: `ssh 260
+- SSH Command: `ssh 260`
 
 ## Class Github Pages
 - https://github.com/webprogramming260/.github/blob/main/profile/instructionTopics.md#readme
