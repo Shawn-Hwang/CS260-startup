@@ -23,7 +23,7 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Database data: all the comments posted by users will be stored in a database.
 - WebSocket data: the website can retrieve the latest comments every time another user posts
 
-### HTML deliverable
+### HTML deliverables
 - HTML pages - Four html files that represent the ability to login, post/view others' posts, and view historical posts.
 - Links - Login page's button links to the Forum page; every page has a menu that links to every other page.
 - App textual content - Others' posts and textual content in the About page.
