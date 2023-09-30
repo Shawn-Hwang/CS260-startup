@@ -32,3 +32,4 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Login placeholder - Login placeholder is in the Home page. User's name is displayed next to the menu after logging in.
 - Database data placeholder - Historical posts found in the My Posts page represent the use of database data.
 - Websocket data placeholder - Others' posts in the Forum page will be updated anytime a user submit a new post. It shows the use of websocket data.
+
