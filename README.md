@@ -25,7 +25,7 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 
 ### HTML deliverables
 - HTML pages - Four html files that represent the ability to login, post/view others' posts, and view historical posts.
-- Links - Login page's button links to the Forum page; every page has a menu that links to every other page.
+- Links - [Home](https://startup.bomforum.org/) page's button links to the Forum page; every page has a menu that links to every other page.
 - App textual content - Others' posts and textual content in the [About](https://startup.bomforum.org/about.html) page.
 - Third-party service call - Random scripture pulled from 3rd-party api in the [About](https://startup.bomforum.org/about.html) page.
 - App image - A logo of the website can be found in the [About](https://startup.bomforum.org/about.html) page.
