@@ -139,3 +139,6 @@ In order to create an input you specify the desired `type` attribute along with 
 ```html
 <label for="checkbox1">Check me</label> <input type="checkbox" name="varCheckbox" value="checkbox1" checked />
 ```
+
+## CSS
+
