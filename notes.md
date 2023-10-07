@@ -141,4 +141,5 @@ In order to create an input you specify the desired `type` attribute along with 
 ```
 
 ## CSS
-<img src="/assets/notes_imgs/bing_chilling.jpg" alt="John Cena holding an ice cream." width="270" height = "200">
+<img src="/assets/notes_imgs/cssDefinitions.jpg" alt="CSS definition." >
+<img src="/assets/notes_imgs/cssBoxModel.jpg" alt="CSS box model." >
