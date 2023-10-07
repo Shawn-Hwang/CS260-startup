@@ -1,5 +1,5 @@
 # A Meme:
-![John Cena holding an ice cream.](/assets/memes/bing_chilling.jpg)
+<img src="/assets/memes/bing_chilling.jpg" alt="John Cena holding an ice cream." width="270" height = "200">
 
 
 ***Good morning China, now I have Bing Chilling!***<sup>lol</sup>
