@@ -35,3 +35,8 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 
 ### CSS deliverables
 - Header, footer, and main content body.
+- Navigation - I changed the background color to royal blue.
+- Responsive to window resizing - My pages look great on all window sizes
+- Application elements - Good alignment and contrast with different font sizes
+- Application text content - Consistent fonts with different font sizes
+- Application images - The width of the image is set to
