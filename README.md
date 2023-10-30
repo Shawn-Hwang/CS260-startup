@@ -39,4 +39,4 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Responsive to window resizing - My pages look great on all window sizes
 - Application elements - Good alignment and contrast with different font sizes
 - Application text content - Consistent fonts with different font sizes
-- Application images - The width of the image is set to
+- Application images - The width of the image on the about page is resized to fit the design
