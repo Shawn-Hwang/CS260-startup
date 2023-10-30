@@ -33,3 +33,5 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Database data placeholder - Historical posts found in the [My Posts](https://startup.bomforum.org/my_posts.html) page represent the use of database data.
 - Websocket data placeholder - Others' posts in the [Forum](https://startup.bomforum.org/forum.html) page will be updated anytime a user submit a new post. It shows the use of websocket data.
 
+### CSS deliverables
+- Header, footer, and main content body.
