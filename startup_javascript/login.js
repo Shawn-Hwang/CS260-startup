@@ -4,3 +4,4 @@ function login() {
     window.location.href = "forum.html";
   }
   
+  
