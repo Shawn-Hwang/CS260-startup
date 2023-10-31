@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM Forum</title>
+    <link rel="icon" href="favicon.ico" />
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+
+
+  <body class="bg-black text-light">
+    <!-- Use header, main, and footer elements to give semantic structure -->
+
+
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">BOM Forum<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="forum.html">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="my_posts.html">My Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </menu>
+      </nav>
+    </header>
+
+    <main class="container-fluid bg-secondary text-center">
+      <div>
+        <h1>Welcome</h1>
+        <p>Login to post!</p>
+        <ul>
+          <li>
+              <label for="username">Username:</label>
+              <input type="text" id="name" placeholder="Your username here" />
+          </li>
+          <li>
+              <label for="password">Password:</label>
+              <input type="text" id="password" placeholder="Your password here" />
+          </li>
+          
+          <button class="btn btn-primary" onclick="login()">Login</button>
+          
+          
+        </ul>
+      </div>
+    </main>
+
+
+
+    <footer class="bg-dark text-white-50">
+      <div class="container-fluid">
+        <span class="text-reset">Shawn Huang</span>
+        <a class="text-reset" href="https://github.com/Shawn-Hwang/CS260-startup">Source Code</a>
+      </div>
+    </footer>
+    
+  </body>
+</html>
