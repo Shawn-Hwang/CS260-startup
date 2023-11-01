@@ -43,16 +43,17 @@
     </header>
 
     <main class="bg-secondary">
-        <div class="username">
+        <div class="username-display">
           Current User: 
+          <span class="username"></span>
         </div>
         <div class="post">
 
           <h1>Post</h1>
           <form method="get" action="index.html">   
               <label for="post">Write something: </label>
-              <textarea id="post" name="varTextarea"></textarea>
-              <button type="reset" class="btn btn-primary">Post</button>
+              <textarea id="post_box" name="varTextarea"></textarea>
+              <button type="reset" class="btn btn-primary" onclick="post.newPost(this)">Post</button>
           </form>
         </div>
 
@@ -71,8 +72,8 @@
                 </fieldset>
             </form>
           </div>
-          <div class="comment_table">
-            <table class="table table-warning table-striped-columns">
+          <div class="comment_display_area">
+            <table class="table table-warning table-striped-columns" id="comment_table">
               <tr>
                 <td>John</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -80,7 +81,8 @@
               </tr>
               <tr>
                 <td>Alexa</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ante lacus, laoreet quis accumsan sit amet, fringilla in eros. Pellentesque.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Fusce ante lacus, laoreet quis accumsan sit amet, fringilla in eros. Pellentesque.</td>
               </tr>
             </table>
           </div>
@@ -94,5 +96,7 @@
         <a class="text-reset" href="https://github.com/Shawn-Hwang/CS260-startup">Source Code</a>
       </div>
     </footer>
+
+    <script src="forum.js"></script>
   </body>
 </html>
