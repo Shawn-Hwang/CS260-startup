@@ -40,3 +40,10 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Application elements - Good alignment and contrast with different font sizes
 - Application text content - Consistent fonts with different font sizes
 - Application images - The width of the image on the about page is resized to fit the design
+
+### JavaScript deliverables
+- Login - When you press the login button it takes you to the forum page.
+- Database - There is one database that stores all the posts. On the forum page all posts will show up, 
+    while on the "my post" page only current user's post will show up. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
+- WebSocket - I used the setInterval function to periodically generate a fake post on the forum page. This will be replaced with WebSocket messages later.
+- Application logic - Whenever the current user make a new post, the new post will show up down below on the forum page and also be stored in the database which the user can retrieve on the "my post" page.
