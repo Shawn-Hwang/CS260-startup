@@ -47,3 +47,10 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
     while on the "my post" page only current user's post will show up. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
 - WebSocket - I used the setInterval function to periodically generate a fake post on the forum page. This will be replaced with WebSocket messages later.
 - Application logic - Whenever the current user make a new post, the new post will show up down below on the forum page and also be stored in the database which the user can retrieve on the "my post" page.
+
+### Service deliverables
+- Node.js/Express HTTP service - Done.
+- Static middleware for frontend - Done.
+- Calls to third party endpoints - On the about page, the quote is fetched thru 3rd party api.
+- Backend service endpoints - Placeholders for login. Endpoints for posting and viewing others' posts.
+- Frontend calls service endpoints - I did this using the fetch function.
