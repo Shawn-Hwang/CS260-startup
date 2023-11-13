@@ -25,26 +25,36 @@ class Post {
     }
 
     // Save post to all posts (database) and update localStorage
-    savePost(post) {
+    async savePost(post) {
         const userName = this.getUserName();
+        const date = new Date().toLocaleDateString();
+        const newPost = { name: userName, post: post, date: date };
+
+        try {
+            const response = await fetch('/api/post', {
+              method: 'POST',
+              headers: {'content-type': 'application/json'},
+              body: JSON.stringify(newPost),
+            });
+      
+            // Store what the service gave us as the posts
+            const posts = await response.json();
+            localStorage.setItem('posts', JSON.stringify(posts));
+        } catch {
+            // If there was an error then just track posts locally
+            this.updatePostsLocal(newPost);
+        }
+    }
+
+    updatePostsLocal(post) {
         let posts = [];
         const postsText = localStorage.getItem('posts');
         if (postsText) {
             posts = JSON.parse(postsText);
         }
-        posts = this.updatePosts(userName, post, posts);
 
+        posts.push(post);
         localStorage.setItem('posts', JSON.stringify(posts));
-
-    }
-
-    // Add the new post to all posts, helper func for savePost()
-    updatePosts(userName, post, posts) {
-        const date = new Date().toLocaleDateString();
-        const newPost = { name: userName, post: post, date: date };
-        
-        posts.push(newPost)
-        return posts;
     }
 
     // Add the new post to the "What others are saying..." section

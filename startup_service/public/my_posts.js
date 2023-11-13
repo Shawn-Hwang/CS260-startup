@@ -1,13 +1,22 @@
-function loadPosts() {
+async function loadPosts() {
     let allPosts = [];
     let posts = [];
     const userName = localStorage.getItem('userName') ?? 'Mystery player';
 
-    // Get all posts
-    const postsText = localStorage.getItem('posts');
-    if (postsText) {
-        allPosts = JSON.parse(postsText);
-    }
+    try {
+        // Get the latest high scores from the service
+        const response = await fetch('/api/posts');
+        allPosts = await response.json();
+    
+        // Save the scores in case we go offline in the future
+        localStorage.setItem('posts', JSON.stringify(allPosts));
+      } catch {
+        // If there was an error then just use the last saved scores
+        const postsText = localStorage.getItem('posts');
+        if (postsText) {
+            allPosts = JSON.parse(postsText);
+        }
+      }
 
     // Filter target posts by the current username
     if (userName !== 'Mystery player') {
@@ -19,7 +28,10 @@ function loadPosts() {
             }
         }
     }
+    displayPosts(posts);
+}
 
+function displayPosts(posts) {
     const tableBodyEl = document.querySelector('#my_posts');
 
     // Add target posts to the table
