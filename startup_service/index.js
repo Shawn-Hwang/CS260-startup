@@ -15,14 +15,14 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // GetScores
-apiRouter.get('/scores', (_req, res) => {
-  res.send(scores);
+apiRouter.get('/posts', (_req, res) => {
+  res.send(posts);
 });
 
 // SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = updateScores(req.body, scores);
-  res.send(scores);
+apiRouter.post('/post', (req, res) => {
+  posts = updatePosts(req.body, posts);
+  res.send(posts);
 });
 
 // Return the application's default page if the path is unknown
@@ -33,3 +33,13 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+// updatePosts added the newPost to all the posts
+// The posts are saved in memory and disappear whenever the service is restarted.
+let posts = [];
+function updatePosts(newPost, posts) {
+
+  posts.push(newPost);
+
+  return posts;
+}
