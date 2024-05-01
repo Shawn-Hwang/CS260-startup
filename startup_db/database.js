@@ -44,7 +44,7 @@ function addPost(post) {
   postCollection.insertOne(post);
 }
 
-function getHighScores() {
+function getPosts() {
   const query = { score: { $gt: 0, $lt: 900 } };
   const options = {
     sort: { score: -1 },
