@@ -71,16 +71,40 @@ apiRouter.get('/user/:email', async (req, res) => {
   res.status(404).send({ msg: 'Unknown' });
 });
 
+// secureApiRouter verifies credentials for endpoints
+var secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+});
+
 // GetPosts
-apiRouter.get('/posts', (_req, res) => {
-  const scores = await DB.getPosts();
+secureApiRouter.get('/posts', async(_req, res) => {
+  const posts = await DB.getPosts();
+  res.send(posts);
+});
+
+// SubmitPost
+secureApiRouter.post('/post', async(req, res) => {
+  const post = { ...req.body, ip: req.ip };
+  await DB.addScore(score);
+  posts = updatePosts(req.body, posts);
   res.send(posts);
 });
 
 // SubmitScore
-apiRouter.post('/post', (req, res) => {
-  posts = updatePosts(req.body, posts);
-  res.send(posts);
+secureApiRouter.post('/score', async (req, res) => {
+  const score = { ...req.body, ip: req.ip };
+  await DB.addScore(score);
+  const scores = await DB.getHighScores();
+  res.send(scores);
 });
 
 // Return the application's default page if the path is unknown
