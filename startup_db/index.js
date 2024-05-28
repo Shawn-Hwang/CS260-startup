@@ -94,23 +94,29 @@ secureApiRouter.get('/posts', async(_req, res) => {
 // SubmitPost
 secureApiRouter.post('/post', async(req, res) => {
   const post = { ...req.body, ip: req.ip };
-  await DB.addScore(score);
-  posts = updatePosts(req.body, posts);
+  await DB.addPost(post);
+  const posts = await DB.getPosts();
   res.send(posts);
 });
 
-// SubmitScore
-secureApiRouter.post('/score', async (req, res) => {
-  const score = { ...req.body, ip: req.ip };
-  await DB.addScore(score);
-  const scores = await DB.getHighScores();
-  res.send(scores);
+// Default error handler
+app.use(function (err, req, res, next) {
+  res.status(500).send({ type: err.name, message: err.message });
 });
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });
+
+// setAuthCookie in the HTTP response
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+}
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
