@@ -44,13 +44,20 @@ function addPost(post) {
   postCollection.insertOne(post);
 }
 
-function getPosts() { // FIXME!!! Fix the query and option below, may be query the posts based on length or date.
-  const query = { post: { $gt: 0, $lt: 900 } };
-  const options = {
-    sort: { score: -1 },
-    limit: 10,
-  };
-  const cursor = postCollection.find(query, options);
+// FIXME!!! Fix the query and option below, may be query the posts based on length or date.
+// Right now it is just returning 10 random posts from the database.
+function getPosts() { 
+  // const query = { post: { $gt: 0, $lt: 900 } };
+  // const options = {
+  //   sort: { score: -1 },
+  //   limit: 10,
+  // };
+  // const cursor = postCollection.find(query, options);
+
+  const pipeline = [
+    { $sample: { size: 10 } }
+  ];
+  const cursor = postCollection.aggregate(pipeline);
   return cursor.toArray();
 }
 
