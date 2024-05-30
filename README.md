@@ -54,3 +54,11 @@ Do you love the Book of Mormon? What is your favorite verse/chapter? Imagine you
 - Calls to third party endpoints - On the about page, the quote is fetched thru 3rd party api.
 - Backend service endpoints - Placeholders for login. Endpoints for posting and viewing others' posts.
 - Frontend calls service endpoints - I did this using the fetch function.
+
+### DB/Login deliverable
+- MongoDB Atlas database created - Done.
+- Stores data in MongoDB - Done.
+- User registration - Creates some new accounts in the database.
+- Existing user - Stores the posts under the same user if the user already exists.
+- Use MongoDB to store credentials - Stores both user and their posts.
+- Restricts functionality - You cannot post until you have logged in. This is restricted on the frontend only. 
