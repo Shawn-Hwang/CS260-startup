@@ -45,7 +45,7 @@ function addPost(post) {
 }
 
 // FIXME!!! Fix the query and option below, may be query the posts based on length or date.
-// Right now it is just returning 10 random posts from the database.
+// Right now it is just returning all posts from the database
 function getPosts() { 
   // const query = { post: { $gt: 0, $lt: 900 } };
   // const options = {
@@ -54,10 +54,11 @@ function getPosts() {
   // };
   // const cursor = postCollection.find(query, options);
 
-  const pipeline = [
-    { $sample: { size: 10 } }
-  ];
-  const cursor = postCollection.aggregate(pipeline);
+  // const pipeline = [
+  //   { $sample: { size: 10 } }
+  // ];
+  // const cursor = postCollection.aggregate(pipeline);
+  const cursor = postCollection.find(); // Find all posts
   return cursor.toArray();
 }
 
