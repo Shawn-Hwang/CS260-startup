@@ -41,7 +41,7 @@ async function loginOrCreate(endpoint) {
   }
 }
 
-function play() {
+function forum() {
   window.location.href = 'forum.html';
 }
 
