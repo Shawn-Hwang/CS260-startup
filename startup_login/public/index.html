@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOM Forum</title>
     <link rel="icon" href="favicon.ico" />
-    <script src="login.js"></script>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="login.css" />
 
     <!-- Include bootstrap CSS framework -->
     <link
@@ -29,12 +29,12 @@
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="forum.html">Forum</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="my_posts.html">My Posts</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
@@ -46,20 +46,20 @@
       <div>
         <h1>Welcome</h1>
         <p>Login to post!</p>
-        <ul>
-          <li>
-              <label for="username">Username:</label>
-              <input type="text" id="name" placeholder="Your username here" />
-          </li>
-          <li>
-              <label for="password">Password:</label>
-              <input type="text" id="password" placeholder="Your password here" />
-          </li>
-          
-          <button class="btn btn-primary" onclick="login()">Login</button>
-          
-          
-        </ul>
+        
+        <div id="loginControls" style="display: none">
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input class="form-control" type="text" id="userName" placeholder="your@email.com" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">🔒</span>
+            <input class="form-control" type="password" id="userPassword" placeholder="password" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+          <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
+        </div>
+
       </div>
     </main>
 
